@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Sign Up</title>
+
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(images/backgorund-login.avif);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+            margin: 0;
+
+        }
+
+        .image>i {
+            font-size: 200px;
+            color: white;
+        }
+
+        .all-elements {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 90vh;
+        }
+
+        .inputbar {
+            background-color: transparent;
+            border: white 3px solid;
+            border-radius: 3px;
+            margin: 20px;
+            width: 350px;
+            box-shadow: 0 0 12px 0 #000000;
+
+
+        }
+
+        .inputbar>input {
+            border: none;
+            background-color: transparent;
+            color: white;
+            font-size: 17px;
+            margin: 5px 0px;
+            width: 220px;
+            font-family: 'Montserrat', sans-serif;
+
+        }
+
+        .inputbar>input::placeholder {
+            color: #ffffff9e;
+        }
+
+        .inputbar>i {
+            color: #000000;
+            font-size: 19px;
+            margin: 5px 10px;
+            padding: 5px 0px 5px 5px;
+        }
+
+        input:focus-visible {
+            outline: none;
+        }
+
+        .submit {
+            margin-top: 10px;
+        }
+
+        .submit>button {
+            border: white 3px solid;
+            background-color: transparent;
+            color: white;
+            font-size: 20px;
+            margin: 5px 10px;
+            width: 355px;
+            padding: 5px 0;
+            border-radius: 3px;
+            font-family: 'Montserrat', sans-serif;
+            box-shadow: 0 0 12px 0 #000000;
+
+        }
+
+        .submit>button:hover {
+            background-color: #ffffff26;
+            transition: 0.6s;
+            color: black;
+            border-color: black;
+
+        }
+
+        hr {
+            margin: 20px 0;
+            padding: 0%;
+            border-style: none;
+            border-top-style: dotted;
+            /* size: 3px; */
+            /* font-size: 0.5rem; */
+            border-width: 8px;
+            width: 3%;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        h2 {
+            margin-top: 25px;
+            font-size: 16px;
+            color: #82ff72;
+        }
+
+        h2>a {
+            text-decoration: none;
+            color: #00fff2;
+        }
+
+        h2>a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="all-elements">
+        <div class="image">
+            <i class="fa-brands fa-slack"></i>
+        </div>
+        <div class="inputs">
+            <div class="inputbar">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Enter Your Username">
+            </div>
+            <div class="inputbar">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="Enter Your Email">
+            </div>
+            <div class="inputbar">
+                <i class="fa-solid fa-unlock"></i>
+                <input type="password" placeholder="Set Password">
+            </div>
+            <div class="inputbar">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="Comform Password">
+            </div>
+        </div>
+        <div class="submit" onclick="click1()">
+            <button onmouseleave="mousedown()">Register</button>
+        </div>
+        <h2>Already Have an Account, <a href="register.html">Sign In? </a></h2>
+        <hr>
+    </div>
+    <script>
+        function mousedown() {
+            document.querySelector(".submit>button").style.transition = "0.6s";
+        }
+        function click1() {
+            console.log("hi");
+            document.querySelector(".submit>button").style.backgroundColor = "#00ff00";
+            setTimeout(() => {
+                document.querySelector(".submit>button").style.backgroundColor = "transparent";
+            }, 550);
+        }
+    </script>
+</body>
+
+</html>
